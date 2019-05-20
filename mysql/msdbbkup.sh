@@ -32,8 +32,8 @@
 # set to today's date because we're running from cron
 
 echo
-echo "Usage: ./msdbsgbkup.sh"
-echo "       ./msdbsgbkup.sh <date>"
+echo "Usage: ./msdbbkup.sh"
+echo "       ./msdbbkup.sh <date>"
 echo
 echo "       where <date> is: \`date '+%Y%m%d_%H%M_%N'\`"
 echo
