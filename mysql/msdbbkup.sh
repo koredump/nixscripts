@@ -122,7 +122,7 @@ echo "cleaning up mysql binary logs up until midnight today..."
 mysql -u {MYSQLDUMP USER} -e "purge master logs before '${MYDATE} 00:00:01';"
 
 # Cleaning up after myself
-/usr/bin/find $TMP -type f -name "tempfile-$PROGNAME*" -ctime +${KEEPDAYS} -exec rm -rf {} + 1>> $OUTFILE 2>&1
+/usr/bin/find $TMPDIR -type f -name "tempfile-$PROGNAME*" -ctime +${KEEPDAYS} -exec rm -rf {} + 1>> $OUTFILE 2>&1
 
 echo "===" >> $OUTFILE
 /bin/date >> $OUTFILE
